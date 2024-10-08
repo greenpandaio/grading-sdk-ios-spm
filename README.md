@@ -8,23 +8,28 @@ Swift version: 5.0
 ### Privacy usage descriptions
 
 The grading flow needs permission for certain device capabilities.
-Therefore the app needs to include in the `Info.plist` file the privacy usage descriptions corresponding to the assessments added in the config, as follows:
-- Privacy - Camera Usage Description - for `front-camera`, `back-camera` assessments or if `finalOfferEnabled` is true.
-- Privacy - Face ID Usage Description - for `face-id` assessment.
-- Privacy - Microphone Usage Description - for `sound-performance` assessment.
+Therefore the app needs to include in the `Info.plist` file the following items:
+- Privacy - Camera Usage Description
+- Privacy - Face ID Usage Description
+- Privacy - Location When In Use Usage Description
+- Privacy - Microphone Usage Description
 
 ## Installing the library
-
 ### Swift Package Manager
-
 In the project's Package Dependencies add a new dependency for url https://github.com/greenpandaio/grading-sdk-ios-spm and set the desired version.
 
-After the PandasGradingSDK package is fetched, move the `PandasGradingSDK.bundle` from the package and include it in the project's target, checking "Copy items if needed".
+After the PandasGradingSDK package is fetched, drag and drop the PandasGradingSDK.bundle from the package contents folder to the project root  checking "Copy items if needed".
+Then include it in the project's target(Project settings -> targets -> Frameworks, Libraries & Embedded Content -> Add PandasGradingSDK).
 
+
+For the CocoaPods legacy installation refer to [the cocoa pod installation instructions](CocoaPodsInstall.md)
 
 ## Configuring the SDK
 
-The SDK is configured using the `configure` public method of `PandasGrading` shared instance
+Before starting the SDK you need to call the `configure` public method of `PandasGrading` shared instance
+Having a configuration file (config.json or any other name) is mandatory and should be bundled along with your app's assets.
+
+colorConfig , fontConfig , stringsURL are optional and should be provided if you want to override the default values.
 
 **Sample**
 
@@ -51,8 +56,9 @@ The environment can be set with the `environment` parameter, setting the desired
 The grading flow configuration is set using the `configURL` parameter, which is the bundle URL containing the json file with the configuration parameters. 
 
 The config properties are:
-- partner - An object containing the name, flow, storeLocationsURL and id of the partner
+- partner - An object containing the name, flow, country, code, storeLocationsURL and id of the partner
 - assessments - An array containing the device tests for grading
+- payment_options - An object containing info about the payment options
 - colors - An object containing the primary color setting
 - email_submission - A boolean indicating if the send quote via email screen should be displayed
 - drop_off_options - The dropoff options for the flow
@@ -67,15 +73,14 @@ The config properties are:
 
 **Sample**
 
-A sample json to include in a .json file
+The config.json should have the following format.
 
 ```
 {
     "partner": {
-        "name": "greenpanda",
-        "flow": "pandas",
-        "storeLocationsURL": "https://google.com"
-        "id": "eb7c5e49-a4af-4426-93e4-4d1dd800b9ad"
+        "name": "your partner name",
+        "storeLocationsURL": "url with your store locations",
+        "id": "your partner id"
     },
     "assessments": [
         "digitizer",
@@ -105,11 +110,13 @@ A sample json to include in a .json file
     },
 }
 
+
 ```
 
 ### Strings
 
-The strings .xml file should be provided using the stringsURL parameter which is the local URL of the strings file.
+The strings .xml file should be provided using the stringsURL parameter which is the local URL of the strings file. Example file :
+[pandas-sdk-strings.xml](/ConfigAssets/Strings-en.xml)
 
 
 ### Color scheme
@@ -218,7 +225,6 @@ enum ImageItem: String {
     case lineTopLeft = "line-top-left"
     case lineTopRight = "line-top-right"
     case locateIcon = "locate-icon"
-    case logo = "logo"
     case magicWand = "magic-wand"
     case microphone = "microphone"
     case mirrorTutorial1 = "mirror_tutorial_1"
@@ -243,7 +249,6 @@ enum ImageItem: String {
     case redRectangleTopRight = "red-rectangle-top-right"
     case reportCosmetics = "report-cosmetics"
     case reuseIcon = "reuse-icon"
-    case revealImei = "reveal-imei"
     case screenIcon = "screen-icon"
     case sensorIcon = "sensor-icon"
     case socialFacebook = "social-facebook"
@@ -280,6 +285,7 @@ The animation names are described in the enum below:
 enum AnimationItem: String {
     case evaluateDigitizer = "evaluate-digitizer.mp4"
     case likeHeart = "like-heart.mp4"
+    case logo = "white-logo.gif"
     case tutorial1 = "carousel-trade-in.mp4"
     case tutorial2 = "carousel-evaluation.mp4"
     case tutorial3 = "carousel-dropoff.mp4"
@@ -288,137 +294,30 @@ enum AnimationItem: String {
 
 ## Using the SDK
 
-The grading flow is started using the `startGrading` function of PandasGrading shared instance. The function parameters are:
-- an instance of UINavigationController which the SDK will use for navigating through the flow.
-- a case of the GradingFlow enum to configure whether the home flow or the store flow should start.
-- the sessionId extracted from the deep link url, for the store flow.
-
-```
-public func startGrading(navigationController: UINavigationController,
-                         gradingFlow: GradingFlow,
-                         sessionId: String? = nil)
-```
-
+The grading flow is started using the `startGrading` function of PandasGrading shared instance. The function parameter is an instance of UINavigationController which the SDK will use for navigating through the flow.
 The navigation controller is to be presented immediately after the call to the `startGrading` func.
 
 **Sample**
 
 ```
-PandasGrading.shared.startGrading(navigationController: gradingNavigationController,
-                                  gradingFlow: .home)
+PandasGrading.shared.startGrading(navigationController: gradingNavigationController)
 gradingNavigationController.modalPresentationStyle = .overFullScreen
 present(gradingNavigationController, animated: true)
 ```
 
-## Supporting Universal Links
+## Eligibility flow - Results output
+The the eligibility flow completion handling is done by implementing the PandasGradingDelegate protocol. The instance of the class implementing the protocol must be set on the PandasGrading shared instance delegate property. The protocol contains a method which provides an EligibilityFlowResult parameter, which can have the following values: success, failed or skipped.
 
-### Add the Associated Domains Capability in Xcode
+`public protocol PandasGradingDelegate: AnyObject {
+    func eligibilityFlowEnded(result: EligibilityFlowResult)
+}`
 
-Go to the project settings by selection your project in the Project Navigator.
-Select your app's target and then the "Signing & Capabilities" tab.
-Add a new capability using "+ Capability" button.
-Select Associated Domains and confirm.
-Configure the domain "applinks:m.pandas.io".
-
-### Configure Associated Domains in Apple Developer Portal
-
-Go to [Apple Developer Portal](https://developer.apple.com/account).
-Select your app's identifier.
-Under the "Capabilities" section, enable the "Associated Domains" capability.
-
-### Add the bundle identifier to the apple-app-site-association file
-
-### Handle Universal Links in your App
-
-You can handle a universal link in AppDelegate using the `application(_: continue: restorationHandler:)`.
-If your app has opted into Scenes, and your app is not running, the system delivers the universal link to the `scene(_:willConnectTo:options:)` delegate method after launch, and to `scene(_:continue:)` when the universal link is tapped while your app is running or suspended in memory.
-
-#### Handle in AppDelegate 
+for example
 
 ```
-func application(_ application: UIApplication,
-                 continue userActivity: NSUserActivity,
-                 restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-
-    // Get the sessionId from the query items of the deep link url
-    // Make your additional URL validation, discarding any malformed URLs
-    var sessionId: String?
-    if let url = userActivity.webpageURL,
-       let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true),
-       let queryItems = urlComponents.queryItems {
-        sessionId = queryItems.first(where: { $0.name == "sessionId" })?.value
+extension AppDelegate: PandasGradingDelegate {
+    func eligibilityFlowEnded(result: EligibilityFlowResult) {
+        print("\n\neligibility flow ended with result: \(result)\n\n")
     }
-        
-    // Configure the PandasGrading SDK
-    PandasGrading.shared.configure(imei: nil,//"352836110046381",
-                                   environment: .staging,
-                                   colorConfig: nil,
-                                   fontConfig: nil,
-                                   stringsURL: Bundle.main.url(forResource: "Strings-en", withExtension: "xml"),
-                                   configURL: Bundle.main.url(forResource: "config", withExtension: "json"))
-    
-    // Show the grading flow
-    // Insert your routing code
-    if let myViewController = window?.rootViewController as? ViewController {
-        myViewController.startGrading(gradingFlow: .store,
-                                      sessionId: sessionId)
-    }
-    
-    return true
-}
-```
-
-```
-class ViewController: UIViewController {
-
-    ...
-    
-    var gradingNavigationController = GradingNavigationViewController()
-    
-    func startGrading(gradingFlow: GradingFlow,
-                      sessionId: String? = nil) {
-        PandasGrading.shared.startGrading(navigationController: gradingNavigationController,
-                                          gradingFlow: .home)
-        gradingNavigationController.modalPresentationStyle = .overFullScreen
-        present(gradingNavigationController, animated: true)
-    }
-    
-    ...
-    
-```
-
-
-#### Handle in SceneDelegate
-
-```
-func scene(_ scene: UIScene, willConnectTo
-           session: UISceneSession,
-           options connectionOptions: UIScene.ConnectionOptions) {
-    
-    // Get the sessionId from the query items of the deep link url
-    // Make your additional URL validation, discarding any malformed URLs
-    var sessionId: String?
-    if let userActivity = connectionOptions.userActivities.first,
-        userActivity.activityType == NSUserActivityTypeBrowsingWeb,
-        let incomingURL = userActivity.webpageURL,
-        let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) {
-        sessionId = queryItems.first(where: { $0.name == "sessionId" })?.value
-    }
-
-    // Configure the PandasGrading SDK
-    PandasGrading.shared.configure(imei: nil,//"352836110046381",
-                                   environment: .staging,
-                                   colorConfig: nil,
-                                   fontConfig: nil,
-                                   stringsURL: Bundle.main.url(forResource: "Strings-en", withExtension: "xml"),
-                                   configURL: Bundle.main.url(forResource: "config", withExtension: "json"))
-    
-    // Show the grading flow
-    // Insert your routing code
-    if let myViewController = window?.rootViewController as? ViewController {
-        myViewController.startGrading(gradingFlow: .store,
-                                      sessionId: sessionId)
-    }
-        
 }
 ```
