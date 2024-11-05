@@ -32,15 +32,20 @@ For the CocoaPods legacy installation refer to [the cocoa pod installation instr
                 colors: ThemeColors(
                     mainColor: "#222222"
                 ),
+                images: ThemeImages(
+                    splashScreen: UIImage(named: "splash-screen1"),
+                    digitizer: UIImage(named: "splash-screen1"),
+                    qrLogo: nil
+                ),
                 fonts: ThemeFonts( // UIFont supported font family
                     primary: "Helvetica",
                     secondary: "Helvetica"
                                  ),
-                customStrings: nil // Optional Override content with custom strings.xml url
+                customStrings: nil // Overide content with custom strings.xml url
             )
-        )
 
 ```
+
 Before starting the SDK you need to call the `configure` public method of `PandasGrading` shared instance with the corresponding configuration object:
 
 ```swift
@@ -68,7 +73,7 @@ The SDK supports the following flows:
 
 ### Start a device assessment flow
 
-The grading flow is started using the `startGrading` function of PandasGrading shared instance. 
+The grading flow is started using the `startGrading` function of PandasGrading shared instance.
 
 ```swift
         PandasGrading.shared.startGrading(
@@ -122,7 +127,7 @@ for example
 
 ```swift
 extension AppDelegate: PandasGradingDelegate {
-    func eligibilityFlowEnded(sessionId: String, 
+    func eligibilityFlowEnded(sessionId: String,
                               result: EligibilityFlowResult) {
         print("\n\neligibility flow for session: \(sessionId), ended with result: \(result)\n\n")
     }
@@ -180,7 +185,6 @@ In case any of theese tests are not configured, the corresponding permissions ar
 ## Extended configuration.
 
 colorConfig , fontConfig , stringsURL are optional and should be provided if you want to override the default values.
-
 
 ### Color scheme
 

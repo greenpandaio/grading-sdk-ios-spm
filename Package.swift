@@ -13,7 +13,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "PandasGradingSDK",
-                      url: "https://pandas-assets.s3.eu-central-1.amazonaws.com/mobile-sdk-files/ios-builds/PandasGradingSDK-1.7.1.zip",
-                      checksum: "a1554ee64c5f34a424f1f23bbc18ea8d20119f699c88d9980203ca7a6fa18928")
+                      url: "https://pandas-assets.s3.eu-central-1.amazonaws.com/mobile-sdk-files/ios-builds/PandasGradingSDK-1.8.0.zip",
+                      checksum: "090e3d8ef5c5bd46d406f250427c604b289cab248ee5339afeb3ca37655ad3d7")
     ]
 )
