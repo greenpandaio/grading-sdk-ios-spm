@@ -21,7 +21,8 @@
         <evaluation_skiped>Evaluation skiped</evaluation_skiped>
         <whats_next>What&#x27;s next?</whats_next>
         <invalid_phonenumber>Please type a valid phone number</invalid_phonenumber>
-        <privacy>We don't store or share any images taken from your device. Your data is safe and private.</privacy>
+        <privacy>We don't store or share any images taken
+from your device.</privacy>
     </common>
     <errors>
         <connection>
@@ -45,20 +46,18 @@
         <more>More</more>
     </start_page>
     <screen_test_page>
-        <evaluate_title>Touch screen test</evaluate_title>
-        <evaluate_description>Let's make sure your touch screen is working properly.</evaluate_description>
-        <check_screen>Check touch screen</check_screen>
+        <evaluate_title>Touchscreen test</evaluate_title>
+        <evaluate_description>Next you’ll swipe around the entire screen to reveal the hidden image. </evaluate_description>
+        <check_screen>Get started</check_screen>
     </screen_test_page>
     <agreements>
         <caption>Before you continue</caption>
         <title>We value your privacy</title>
-        <subtitle>To enroll in device protection, we’ll collect data and use your camera to assess your device's condition. No personal information, including any images used for evaluation, will be collected or stored.
+        <subtitle>To enroll in device protection, we'll collect data and use your camera to assess your device's condition.
             
-Please review and accept the terms below to proceed.</subtitle>
+No images used for evaluation will be collected or stored. Review our Privacy Notice to learn how we handle your data.</subtitle>
         <start>Start evaluation</start>
-        <agree>I agree to the </agree>
-        <privacy_policy_link>Privacy Policy Terms</privacy_policy_link>
-        <terms_link>Terms and Conditions</terms_link>
+        <privacy_policy_link>Privacy Notice</privacy_policy_link>
     </agreements>
     <thank_you_page>
         <title>Thank you!</title>
@@ -77,6 +76,9 @@ Please review and accept the terms below to proceed.</subtitle>
         <list_item_3>
             <title>Make sure your secondary device has access to data or wi-fi.</title>
         </list_item_3>
+        <list_item_4>
+            <title>If you exit the app before finishing, you’ll need to start over.</title>
+        </list_item_4>
     </cosmetic_d2d_what_you_need>
     <peer_cosmetic_what_you_need>
         <subtitle>Before you start</subtitle>
@@ -85,11 +87,14 @@ Please review and accept the terms below to proceed.</subtitle>
             <title>Remove the case from the device you want to evaluate.</title>
         </list_item_1>
         <list_item_2>
-            <title>Find a well-lit spot</title>
+            <title>Find a well-lit spot.</title>
         </list_item_2>
         <list_item_3>
-            <title>Make sure your secondary device has access to data or wi-fi.</title>
+            <title>Make sure your the device you want to evaluate has access to data or wi-fi.</title>
         </list_item_3>
+        <list_item_4>
+            <title>If you exit the app before finishing, you’ll need to start over.</title>
+        </list_item_4>
     </peer_cosmetic_what_you_need>
     <mirror_what_you_need>
         <subtitle>Before you start</subtitle>
@@ -101,8 +106,11 @@ Please review and accept the terms below to proceed.</subtitle>
             <title>Stand in front of a mirror.</title>
         </list_item_2>
         <list_item_3>
-            <title>Make sure the area is well-lit.</title>
+            <title>Make sure the area is well-lit and in a quiet, private space.</title>
         </list_item_3>
+        <list_item_4>
+            <title>If you exit the app before finishing, you’ll need to start over.</title>
+        </list_item_4>
     </mirror_what_you_need>
     <what_you_need_page>
         <subtitle>Before we start.</subtitle>
@@ -205,12 +213,10 @@ Please review and accept the terms below to proceed.</subtitle>
         <primary_button>Take photo</primary_button>
         <capturing_button>Taking photo</capturing_button>
         <front>
-            <title>Capture the front</title>
-            <description>Face the front of your device toward the mirror and take a clear image.</description>
+            <description>Capture the front of the device</description>
         </front>
         <back>
-            <title>Capture the back</title>
-            <description>Face the front of your device toward the mirror and take a clear image.</description>
+            <description>Capture the back of the device</description>
         </back>
     </mirror_camera_page>
     <test_back_camera_page>
@@ -242,8 +248,8 @@ Please review and accept the terms below to proceed.</subtitle>
     </digitizer_page>
     <test_digitizer_page>
         <instructions>
-            <title>Time to play!</title>
-            <description>Swipe the entire screen&lt;br /&gt; to reveal the hidden image.</description>
+            <description>Swipe around the entire screen
+to reveal the hidden image. </description>
         </instructions>
     </test_digitizer_page>
     <scratch_component>
@@ -284,9 +290,14 @@ Please review and accept the terms below to proceed.</subtitle>
     </test_multitouch_page>
     <sound_performance_page>
         <skip_modal_title>Are you sure your microphone doesn&#x27;t work?</skip_modal_title>
-        <evaluate_title>Sound test</evaluate_title>
-        <evaluate_description>Let's make sure your microphone and speakers are working properly.</evaluate_description>
-        <check_sound>Check sound</check_sound>
+        <evaluate_title>Speaker and microphone test</evaluate_title>
+        <evaluate_description>Let's make sure your microphone and speakers are working properly.
+ 
+ • Find a quiet place
+
+ • Turn off Bluetooth to any external microphone, speaker, or hearing aids.
+        </evaluate_description>
+        <check_sound>Start test</check_sound>
         <footer_message>My microphone doesn&#x27;t work</footer_message>
     </sound_performance_page>
     <allow_microphone_page>
@@ -325,18 +336,15 @@ Please review and accept the terms below to proceed.</subtitle>
             <title>It seems that your audio isn&#x27;t fully functional...</title>
         </not_working_modal>
         <content_volume_up>
-            <alt_img>Volume up</alt_img>
             <title>Turn the volume up to 100%</title>
-            <description>Make sure you're in a quiet place,
-then tap 'Start'.</description>
+            <description>Make sure you're in a quiet place, then tap 'Start'.</description>
         </content_volume_up>
-        <content_volume_down>
-            <alt_img>Volume down</alt_img>
-            <title>Turn the &lt;strong&gt;volume down&lt;/strong&gt; at about 50%</title>
-            <description></description>
-        </content_volume_down>
+        <sound_check>
+            <title>Checking speakers and microphone</title>
+            <description>Your phone will make some sounds to make sure your hardware is working properly.</description>
+        </sound_check>
         <already_button>Start</already_button>
-        <checking>Checking sound</checking>
+        <checking>Analyzing...</checking>
     </test_sound_performance_page>
     <face_id_page>
         <skip_modal_title>Are you sure your Face ID doesn&#x27;t work?</skip_modal_title>
@@ -534,16 +542,20 @@ then tap 'Start'.</description>
         <subtitle>We’ll use your secondary device’s camera to take a quick look at the condition of this device.</subtitle>
     </peer_qr_cosmetic>
     <peer_qr_functional>
-        <title>Scan the QR code with your secondary device</title>
-        <subtitle>We’ll use your secondary device’s camera to take a quick look at the condition of this device.</subtitle>
+        <title>Scan the QR code with the device you want to enroll</title>
+        <subtitle>To enroll your device in protection, we’ll need to check its screen and sound condition.
+            
+Make sure the device you want to enroll has access to data or wi-fi.</subtitle>
     </peer_qr_functional>
     <peer_cosmetic_condition_page>
-        <title>Use another device</title>
-        <description>Let's check the device you want to enroll in protection using a secondary device to capture images of the front and back.</description>
+        <title>Check device condition</title>
+        <description>Let’s take a quick look at your device.
+
+You’ll capture images of the front and back of your device to check for damage. We’ll then evaluate the touch screen, microphone, and speakers.</description>
         <button>Get started</button>
     </peer_cosmetic_condition_page>
     <cosmetic_condition_page>
-        <title>Use a mirror</title>
+        <title>Take a picture in a mirror</title>
         <description>Let's check the device you want to enroll in protection using a mirror to capture images of the front and back.</description>
         <button>Get started</button>
     </cosmetic_condition_page>
@@ -575,8 +587,8 @@ then tap 'Start'.</description>
             <device-holding>Please ensure your hands do not cover the front screen of the device.</device-holding>
         </errors>
         <finished>
-            <title>Evaluation completed</title>
-            <subtitle>Tap continue to start the functional tests</subtitle>
+            <title>Front and back check complete!</title>
+            <subtitle>Now, let’s move on to the touch screen and sound tests.</subtitle>
         </finished>
     </cosmetic_condition_test>
     <front_condition_page>
@@ -600,10 +612,12 @@ then tap 'Start'.</description>
         </answers>
     </device_turns_on>
     <cosmetic_options>
-        <title>Choose how to check the condition of your device</title>
-        <subtitle>To enroll your device in protection, we need to confirm its condition. You'll capture images of the front and back of the device to check for any damage.</subtitle>
+        <title>Check device condition</title>
+        <subtitle>Let’s take a quick look at your device. 
+You’ll capture images of the front and back of your device to check for damage. We’ll then evaluate the touch screen, microphone, and speakers.</subtitle>
         <mirror>
             <title>Use a mirror</title>
+            <recommended>Recommended</recommended>
         </mirror>
         <other_device>
             <title>Use another device</title>

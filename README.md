@@ -24,9 +24,10 @@ For the CocoaPods legacy installation refer to [the cocoa pod installation instr
         let gradingSDKConfig = GradingSDKConfig(
             environment: .staging,
             partner: Partner(
-                id: "eb7c5e49-a4af-4426-93e4-4d1dd800b9ad",
+                id: "c9583b49-deb2-47a5-9653-f94328a6a9a8",
                 name: "pandas",
-                code: "pandas"
+                code: "pandas_sdk",
+                token: "895cfd33feef1ac61997137b43ecbb155a8c465ed9aa67efa71463ec8d5e44d7"
             ),
             theme: Theme(
                 colors: ThemeColors(
@@ -128,8 +129,11 @@ for example
 ```swift
 extension AppDelegate: PandasGradingDelegate {
     func eligibilityFlowEnded(sessionId: String,
-                              result: EligibilityFlowResult) {
-        print("\n\neligibility flow for session: \(sessionId), ended with result: \(result)\n\n")
+                              result: PandasGradingSDK.EligibilityFlowResult,
+                              assessmentResults: [String : String],
+                              batteryStats: PandasGradingSDK.BatteryStats?,
+                              exitScreen: ExitScreen?) {
+        print("\n\neligibility flow for session: \(sessionId), ended with result: \(result), assessments: \(assessmentResults), battery stats: \(batteryStats), exit screen: \(exitScreen)\n\n")
     }
 }
 ```
