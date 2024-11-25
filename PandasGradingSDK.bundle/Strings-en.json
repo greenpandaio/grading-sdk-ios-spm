@@ -1,0 +1,706 @@
+{
+    "common": {
+        "start": "Start",
+        "resume_evaluation": "No, resume evaluation",
+        "resume": "Resume",
+        "exit": "Exit",
+        "exit_evaluation": "Exit Evaluation?",
+        "evaluation_warning": "You must complete device evaluation to enroll in device protection. Your progress will be saved for %d minutes.",
+        "offer_warning": "You can continue, but your<br />offer will be lower.",
+        "cancel": "Cancel",
+        "continue": "Continue",
+        "lets_evaluate": "Let's evaluate your",
+        "start_now": "Start now",
+        "allow_access": "Allow access",
+        "deny_access": "Don't allow access",
+        "skip_step": "Got it, skip to the next step",
+        "try_again": "Try again",
+        "works_ok": "Works OK",
+        "evaluation_failed": "Evaluation failed",
+        "evaluation_skiped": "Evaluation skiped",
+        "whats_next": "What's next?",
+        "invalid_phonenumber": "Please type a valid phone number",
+        "privacy": "We don't store or share any images taken\nfrom your device."
+    },
+    "errors": {
+        "connection": {
+            "title": "No internet connection",
+            "subtitle": "Please check your connection and try again",
+            "button": "Try Again"
+        },
+        "network_error": {
+            "title": "Something went wrong",
+            "subtitle": "Please try again",
+            "button": "Try Again"
+        },
+        "session_expired": {
+            "title": "Session has timed out",
+            "subtitle": "Please try again",
+            "button": "Try Again"
+        }
+    },
+    "start_page": {
+        "title": "<span>Trade in.</span><br />Save money.<br />Do good.",
+        "more": "More"
+    },
+    "screen_test_page": {
+        "evaluate_title": "Touchscreen test",
+        "evaluate_description": "Next you’ll swipe around the entire screen to reveal the hidden image.",
+        "check_screen": "Get started"
+    },
+    "agreements": {
+        "caption": "Before you continue",
+        "title": "We value your privacy",
+        "subtitle": "To enroll in device protection, we'll collect data and use your camera to assess your device's condition.\n            \nNo images used for evaluation will be collected or stored. Review our Privacy Notice to learn how we handle your data.",
+        "start": "Start evaluation",
+        "privacy_policy_link": "Privacy Notice"
+    },
+    "thank_you_page": {
+        "title": "Thank you!",
+        "description": "A member of the Pandas team will get back to you shortly.",
+        "primary_button": "Back to home"
+    },
+    "cosmetic_d2d_what_you_need": {
+        "subtitle": "Before you start",
+        "title": "What you will need",
+        "list_item_1": {
+            "title": "Remove the case from the device you want to evaluate."
+        },
+        "list_item_2": {
+            "title": "Find a well-lit spot"
+        },
+        "list_item_3": {
+            "title": "Make sure your secondary device has access to data or wi-fi."
+        },
+        "list_item_4": {
+            "title": "If you exit the app before finishing, you’ll need to start over."
+        }
+    },
+    "peer_cosmetic_what_you_need": {
+        "subtitle": "Before you start",
+        "title": "What you will need",
+        "list_item_1": {
+            "title": "Remove the case from the device you want to evaluate."
+        },
+        "list_item_2": {
+            "title": "Find a well-lit spot."
+        },
+        "list_item_3": {
+            "title": "Make sure your the device you want to evaluate has access to data or wi-fi."
+        },
+        "list_item_4": {
+            "title": "If you exit the app before finishing, you’ll need to start over."
+        }
+    },
+    "mirror_what_you_need": {
+        "subtitle": "Before you start",
+        "title": "What you will need",
+        "list_item_1": {
+            "title": "Remove your device from its case."
+        },
+        "list_item_2": {
+            "title": "Stand in front of a mirror."
+        },
+        "list_item_3": {
+            "title": "Make sure the area is well-lit and in a quiet, private space."
+        },
+        "list_item_4": {
+            "title": "If you exit the app before finishing, you’ll need to start over."
+        }
+    },
+    "what_you_need_page": {
+        "subtitle": "Before we start.",
+        "title": "What you will need to evaluate your",
+        "list_item_1": {
+            "title": "Set up your FaceID or TouchID",
+            "description": ""
+        },
+        "list_item_2": {
+            "title": "Have access to a mirror",
+            "description": "We know this may sound a bit strange at the moment :)"
+        },
+        "list_item_3": {
+            "title": "Stay in a quite place for 5'",
+            "description": ""
+        },
+        "list_item_4": {
+            "title": "Disconnect Bluetooth devices",
+            "description": ""
+        },
+        "lets_start": "Let's start",
+        "footer_text": "We respect your personal information.<br/>Read our",
+        "privacy_policy_link": "Privacy Policy"
+    },
+    "resume": {
+        "title": "Resume device test",
+        "subtitle": "Add device protection",
+        "deadline": "Finish your evaluation until",
+        "tests": {
+            "cosmetic_grading": "Front and back check",
+            "screen": "Touch screen check",
+            "sound": "Sound check",
+            "functional": "Functional tests"
+        },
+        "passed": "Passed",
+        "paused": "Paused"
+    },
+    "box_edges_guard": "Too close to the edges.",
+    "wrong_edge_left": "Move phone a bit to the left",
+    "wrong_edge_right": "Move phone a bit to the right",
+    "wrong_edge_top": "Move phone higher",
+    "wrong_edge_bottom": "Move phone lower",
+    "image_brightness_guard_dark": "Image too dark.",
+    "image_brightness_guard_bright": "Image too bright.",
+    "is_stabilized_guard": "Perfect! Stay still.",
+    "object_detected_percentage_guard": "Too far.",
+    "front_camera_page": {
+        "skip_modal_title": "Are you sure your camera doesn't work?",
+        "evaluate_title": "Front Camera Condition",
+        "evaluate_description": "Check the condition of your front camera using a clean mirror.",
+        "evaluate_description_store": "Check the condition of your front camera by detecting your face with it.",
+        "footer_message": "My front camera doesn't work",
+        "button": "Check front camera"
+    },
+    "allow_camera_page": {
+        "title": "Allow camera access",
+        "description": "Access is needed to capture images and evaluate the condition of your device.",
+        "deny_alert": {
+            "title": "Not allowing access to your camera will terminate the evaluation",
+            "description": "You need to complete evaluation to get the device protection plan"
+        },
+        "retry_alert": {
+            "title": "Allow %@ to access your camera",
+            "message": "Required to capture images and test the condition of your device.",
+            "action": "Open settings"
+        }
+    },
+    "image_preview_page": {
+        "heading": "Is the phone completely visible and in focus?",
+        "tooltip_message": "Make sure the photo is clear and not blurred so we can evaluate the cosmetic condition of your phone fairly. Otherwise, you may run the risk of getting a lower offer.",
+        "tooltip_alt": "info",
+        "save": "Yes",
+        "retake": "No, retake"
+    },
+    "test_camera_page": {
+        "modal": {
+            "title": "Oh snap...",
+            "description": "If we don’t evaluate your Camera, we’ll have to give you lower trade in quote.",
+            "primary_button": "Check camera"
+        },
+        "instructions": {
+            "alt_img": "Rotate phone",
+            "title": "Turn your device around",
+            "description": "Turn your phone around, so the front-facing camera is pointing at a mirror."
+        },
+        "instructions_store": {
+            "title": "Position your face within frame",
+            "description": "A quick check that your front camera is working. Smile:)",
+            "no_pictures": "No pictures taken!"
+        }
+    },
+    "back_camera_page": {
+        "skip_modal_title": "Are you sure your camera doesn't work?",
+        "evaluate_title": "Back Camera condition",
+        "evaluate_description": "Check the condition of your back camera using a clean mirror. Please remove your case.",
+        "evaluate_description_store": "Check the condition of your back camera by  detcting an object inside the store.",
+        "footer_message": "My back camera doesn't work"
+    },
+    "mirror_camera_page": {
+        "primary_button": "Take photo",
+        "capturing_button": "Taking photo",
+        "front": {
+            "description": "Capture the front of the device"
+        },
+        "back": {
+            "description": "Capture the back of the device"
+        }
+    },
+    "test_back_camera_page": {
+        "modal": {
+            "title": "Oh snap...",
+            "description": "If we don’t evaluate your Camera, we’ll have to give you lower trade in quote.",
+            "primary_button": "Check camera"
+        },
+        "instructions": {
+            "alt_img": "Face the mirror",
+            "title": "Hold your device with the tip of your fingers"
+        },
+        "instructions_store": {
+            "description": "Point the camera to any object. Just wait for the AI to identify it.",
+            "no_pictures": "No pictures taken!"
+        }
+    },
+    "digitizer_page": {
+        "skip_modal": {
+            "title": "Oh snap?...",
+            "description": "If we don’t evaluate your touch screen, we’ll have to give you lower trade in quote.",
+            "button": "Check digitizer"
+        },
+        "skip_modal_title": "Are you sure your touch screen doesn't work?",
+        "evaluate_title": "Digitizer",
+        "evaluate_description": "Check the digitizer condition of your device",
+        "check_digitizer": "Check digitizer",
+        "footer_message": "My touch screen is not fully functional"
+    },
+    "test_digitizer_page": {
+        "instructions": {
+            "description": "Swipe around the entire screen\nto reveal the hidden image."
+        }
+    },
+    "scratch_component": {
+        "modal_swiping": {
+            "title": "Keep swiping!",
+            "description": "You have to swipe your screen from edge to edge!"
+        },
+        "modal_touch_not_working": {
+            "title": "It seems that your touch screen isn't fully functional...",
+            "description": "You have to swipe your screen from edge to edge!"
+        }
+    },
+    "multitouch_page": {
+        "title": "Multitouch gestures",
+        "description": "Check the functionality of your screen's multitouch gestures.",
+        "check_multitouch": "Check  Multitouch",
+        "footer_message": "My screen’s multitouch doesn’t work",
+        "skip_modal_title": "Are you sure your multitouch doesn’t work?"
+    },
+    "test_multitouch_page": {
+        "instructions": {
+            "title": "Let’s check your screen’s multitouch!",
+            "description": "Tap on the popup and touch your screen with 2 fingers"
+        },
+        "instructions_two_fingers": "Touch your screen <br /> with 2 fingers",
+        "instructions_three_fingers": "Great! Now, touch your screen with 3 fingers",
+        "tap_to_start": "Tap to start!",
+        "title_two_fingers": "Touch your screen <br /> with 2 fingers",
+        "title_three_fingers": "Touch your screen <br /> with 3 fingers",
+        "retry_modal": {
+            "title": "I didn’t sense any touch...",
+            "description": "You have to touch  the device with two fingers",
+            "skip_test": "Skip this step"
+        },
+        "fail_modal": {
+            "title": "It seems that screen multitouch isn’t fully functional..."
+        }
+    },
+    "sound_performance_page": {
+        "skip_modal_title": "Are you sure your microphone doesn't work?",
+        "evaluate_title": "Speaker and microphone test",
+        "evaluate_description": "Let's make sure your microphone and speakers are working properly.\n \n • Find a quiet place\n\n • Turn off Bluetooth to any external microphone, speaker, or hearing aids.",
+        "check_sound": "Start test",
+        "footer_message": "My microphone doesn't work"
+    },
+    "allow_microphone_page": {
+        "title": "Allow microphone access",
+        "description": "Access is needed to evaluate the sound quality of your device.",
+        "privacy_message": "We don't store or share any audio from your device. Your data is safe and private.",
+        "deny_alert": {
+            "title": "Not allowing access to your microphone will terminate the evaluation",
+            "description": "You need to complete evaluation to get the device protection plan"
+        },
+        "retry_alert": {
+            "title": "Allow %@ to access your microphone",
+            "message": "Required to test the sound quality of your device.",
+            "action": "Open settings"
+        }
+    },
+    "test_sound_performance_page": {
+        "skip_modal": {
+            "button": "Check sound performance",
+            "title": "Oh snap?...",
+            "description": "If we don't evaluate your microphone, we'll have to give you lower trade in quote."
+        },
+        "retry_modal": {
+            "primary_button": "Retry",
+            "link_button": "Skip this step",
+            "title": "Sorry, I didn't catch that",
+            "description": "Please check all the above",
+            "items_list": {
+                "item_1": "Unmute your phone",
+                "item_2": "Set the volume to 100%",
+                "item_3": "Make sure your smartphone is not connected to headsets or airpods",
+                "item_4": "Make sure you turn down loud sounds from other devices"
+            }
+        },
+        "not_working_modal": {
+            "title": "It seems that your audio isn't fully functional..."
+        },
+        "content_volume_up": {
+            "title": "Turn the volume up to 100%",
+            "description": "Make sure you're in a quiet place, then tap 'Start'."
+        },
+        "sound_check": {
+            "title": "Checking speakers and microphone",
+            "description": "Your phone will make some sounds to make sure your hardware is working properly."
+        },
+        "already_button": "Start",
+        "checking": "Analyzing..."
+    },
+    "face_id_page": {
+        "skip_modal_title": "Are you sure your Face ID doesn't work?",
+        "setup_modal_title": "It’s ok, you can set up your biometrics now!",
+        "setup_modal_description": "Tap on the button to see how to set up your device’s biometrics",
+        "setup_modal_button": "Set up biometrics",
+        "evaluate_title": "Biometrics",
+        "evaluate_description": "Assess the biometrics functionality of your device.",
+        "check_face_id": "Check Biometrics",
+        "no_face_id": "I haven’t set up my Biometrics",
+        "footer_message": "Biometrics don’t work"
+    },
+    "allow_face_id_page": {
+        "img_alt": "hardware buttons icon",
+        "title": "Allow biometrics access",
+        "description": "Required access to test the functionality of your device's biometrics.",
+        "privacy_message": "We will never share biometric data taken from your device. Your data are safe and private."
+    },
+    "test_face_id_page": {
+        "skip_modal": {
+            "button": "Check Face ID",
+            "title": "Oh snap...",
+            "description": "If we don’t evaluate your Face ID, we’ll have to give you lower trade in quote."
+        },
+        "error_modal": {
+            "button": "Check  biometrics",
+            "return": "Return to biometric options",
+            "title": "It’s ok, you can test your biometrics now!",
+            "description": "Tap on the button to test your device’s biometrics"
+        },
+        "instructions": {
+            "title": "Tap on the icon",
+            "description": "Tap on the Face ID icon to activate your smartphone’s biometrics."
+        },
+        "fail_modal": {
+            "primary_button": "Retry",
+            "link_button": "Skip this step",
+            "title": "Sorry I couldn’t test",
+            "description": "Please check all the below",
+            "items_list": {
+                "item_1": "Set up your Face ID",
+                "item_2": "Sign in to your Apple ID account",
+                "item_3": "Turn On Sync on iCloud Passwords & Keychain."
+            }
+        }
+    },
+    "device_motion_page": {
+        "evaluate_title": "Sensors",
+        "evaluate_description": "Check the functionality of your device's accelerometer and gyroscope.",
+        "check_device_motion": "Check  Sensors",
+        "no_device_motion": "My sensors don’t work",
+        "skip_modal": {
+            "title": "Are you sure your sensors don’t work?"
+        },
+        "intro_modal": {
+            "button": "Tap to start!",
+            "title": "Tilt your device",
+            "description": "Try to hit all the marks with the ball"
+        },
+        "warning_modal": {
+            "title": "I didn’t sense any movement...",
+            "description": "You have to tilt the device"
+        },
+        "fail_modal": {
+            "title": "It seems that your device's sensors aren't fully functional..."
+        }
+    },
+    "test_device_motion_page": {
+        "heading": "Move the ball to hit the target",
+        "no_device_motion": "My sensors don’t work"
+    },
+    "reveal_imei_page": {
+        "title": "Almost done!",
+        "description": "One last thing! Please follow the next steps to reveal the IMEI number of your device.",
+        "help_list": {
+            "title": "Next steps",
+            "step_1": "Tap the button to display your IMEI.",
+            "step_2": "Call *#06#",
+            "step_3": "Put your phone back in the drawer with this screen on."
+        },
+        "button": "Get IMEI"
+    },
+    "imei_page": {
+        "top_title_price": {
+            "title": "Submit your <span>IMEI</span> to get an accurate price",
+            "description": "Submit your <span>IMEI</span> to<br />get an accurate price"
+        },
+        "top_title": {
+            "title": "Almost done!",
+            "title_at_store": "Submit IMEI",
+            "description": "In order to finallize the assement, we need you to provide us with your device’s IMEI. Find the IMEI number, copy it, and paste it below."
+        },
+        "input": {
+            "label": "IMEI",
+            "placeholder": "Enter your IMEI number",
+            "valid_imei": "Valid IMEI number.",
+            "invalid_imei": "Please type a valid IMEI"
+        },
+        "get_imei": "Get IMEI",
+        "submit_imei": "Submit IMEI",
+        "instructions": "*Maximum price for highest model capacity",
+        "identifying_device": "Identifying device...",
+        "help_list": {
+            "title": "How to find IMEI",
+            "step_1_android": "Go to <strong>Settings > About phone</strong>",
+            "step_1_ios": "Press <strong>Get IMEI</strong> button",
+            "step_2": "<strong>Find</strong> your IMEI number",
+            "step_3": "<strong>Copy</strong> IMEI, and <strong>paste</strong> it above"
+        },
+        "identification_error": {
+            "INVALID_DEVICE_IDENTIFIER": "INVALID_DEVICE_IDENTIFIER",
+            "DEVICE_ALREADY_BOUGHT": "DEVICE_ALREADY_BOUGHT",
+            "DEVICE_CAPACITY_MISSING": "DEVICE_CAPACITY_MISSING",
+            "EXTERNAL_INVALID_DEVICE_IDENTIFICATION": "EXTERNAL_INVALID_DEVICE_IDENTIFICATION"
+        }
+    },
+    "status_message_shell": {
+        "message_1": "We successfully</br> identified your device!",
+        "message_2": "Just a moment,</br>we’re preparing your quote."
+    },
+    "get_quote_page": {
+        "top_title": {
+            "title": "Get your quote.",
+            "description": "Enter your email so as to forward our offer to your inbox as too."
+        },
+        "input": {
+            "label": "E-mail",
+            "placeholder": "E-mail",
+            "valid_email": "E-mail valid",
+            "invalid_email": "Please type a valid E-mail"
+        },
+        "privacy_policy": "Pandas respects your personal data.",
+        "privacy_policy_link": "Privacy Policy",
+        "view_offer": "View offer"
+    },
+    "offer_page": {
+        "loader": "Preparing your offer",
+        "modal_title": "We are sorry, we don’t buy your smartphone at the moment.",
+        "trade_in": "Trade in for up to",
+        "button_action_1": "Trade in now",
+        "button_action_2": "Do you have promo code?",
+        "button_voucher": "Voucher up to",
+        "button_cash": "Cash Deposit up to",
+        "final_price": "The final price will be determined after the final evaluation of the device. <strong>You have %@ days to claim the offer</strong>.",
+        "binding_offer": "Need a final offer?",
+        "device_new": "Your device is \"Like New\"",
+        "detailed_report": "Detailed report",
+        "evaluation_list": {
+            "digitizer": "Digitizer",
+            "front-camera-ai": "Front camera",
+            "back-camera-ai": "Back camera",
+            "question-screen-blemishes": "Screen",
+            "question-body-frame": "Phone’s Body Frame",
+            "audio": "Speakers",
+            "multitouch": "Multitouch",
+            "biometrics": "Face ID / Touch ID",
+            "gyroscope": "Sensors",
+            "speakers": "Speakers",
+            "face_id_touch_id": "Face ID / Touch ID",
+            "sensors": "Sensors",
+            "front_camera": "Front camera",
+            "back_camera": "Back camera"
+        },
+        "info_price_title": "How we calculate our prices?",
+        "info_price_description": "The offer we give you is calculated based on the condition of your device, as well as characteristics such as its brand, the model, and its capacity. Additionally, in collaboration with the biggest marketplaces of refurbished devices, we check the demand of your phone in the market. We Pandas keep a fee (avg. 10% of the price offered) to evaluate and transport your device and you get paid in less than 3'.",
+        "info_final_offer_title": "What is a \"Final Offer\"?",
+        "info_final_offer_description": "\"Final Offer\" is the most accurate price that Pandas can offer after inspecting the device's front and back cosmetics due to the online grading process. To get a \"Binding Offer\", customers should ship the device by mail or visit a Pandas Partner's associate for a final inspection using Pandas technology.",
+        "info_promo_title": "Please enter your promo code",
+        "promo_applied": "Promo code applied",
+        "info_input_placeholder": "Type promo code",
+        "info_submit": "Submit",
+        "faulty": "Faulty",
+        "is_not_working": "Is not working",
+        "evaluation_warning": "Your offer remains valid for %@ days so that you can complete your trade in at store. If you wish to run a new round of diagnostic checks you can click below. The updated diagnostic results will override any previous ones.",
+        "exit_evaluation": "Retake Evaluation"
+    },
+    "mirror_walkthrough_page": {
+        "title": "What you will need before you start",
+        "slide_1": {
+            "title": "Have access to a mirror"
+        },
+        "slide_2": {
+            "title": "Stand  in a bright room"
+        },
+        "slide_3": {
+            "title": "Avoid covering the device with your fingers"
+        },
+        "slide_4": {
+            "title": "Remove cases, damaged screen protectors etc"
+        },
+        "button": "Start now!"
+    },
+    "peer_qr_cosmetic": {
+        "title": "Scan the QR code with your secondary device",
+        "subtitle": "We’ll use your secondary device’s camera to take a quick look at the condition of this device."
+    },
+    "peer_qr_functional": {
+        "title": "Scan the QR code with the device you want to enroll",
+        "subtitle": "To enroll your device in protection, we’ll need to check its screen and sound condition.\n            \nMake sure the device you want to enroll has access to data or wi-fi."
+    },
+    "peer_cosmetic_condition_page": {
+        "title": "Check device condition",
+        "description": "Let’s take a quick look at your device.\n\nYou’ll capture images of the front and back of your device to check for damage. We’ll then evaluate the touch screen, microphone, and speakers.",
+        "button": "Get started"
+    },
+    "cosmetic_condition_page": {
+        "title": "Take a picture in a mirror",
+        "description": "Let's check the device you want to enroll in protection using a mirror to capture images of the front and back.",
+        "button": "Get started"
+    },
+    "cosmetic_d2d_condition_page": {
+        "title": "Use another device",
+        "description": "Let's check the device you want to enroll in protection using a secondary device to capture images of the front and back.",
+        "button": "Get started"
+    },
+    "cosmetic_condition_test": {
+        "checking": "We're reviewing your images...",
+        "button_retake": "Retake photos",
+        "error_title": "Unfortunately, we couldn't use your images for evaluation",
+        "error_reason": "Reason",
+        "error_subtitle": "Please retake the photos in a well-lit area. Remember to remove the case and ensure the images are focused and centered.",
+        "errors": {
+            "photos-error": "Something is wrong with the photos",
+            "align-phone": "Align the Phone",
+            "not-properly-flipped": "The device is not flipped",
+            "empty-drawer": "Empty Drawer",
+            "no-ocr-screen": "The IMEl is not displayed on the screen",
+            "clean-phone": "Clean Phone",
+            "turn-on-screen": "Turn on the Screen",
+            "remove-cover": "Remove Cover",
+            "remove-film": "Remove Film",
+            "out-of-focus": "Please ensure the photo of the device is clear and in focus.",
+            "brightness": "Please capture device photo in brighter environment.",
+            "device-not-visible": "Please ensure the device is clearly visible on the captured photo",
+            "accessories": "Please remove visible stickers and/or damaged screen protectors/covers",
+            "device-holding": "Please ensure your hands do not cover the front screen of the device."
+        },
+        "finished": {
+            "title": "Front and back check complete!",
+            "subtitle": "Now, let’s move on to the touch screen and sound tests."
+        }
+    },
+    "front_condition_page": {
+        "title": "Front Condition",
+        "description": "Check the condition of your front camera using a clean mirror.",
+        "button": "Check front condition",
+        "footer_message": "My front camera doesn't work"
+    },
+    "device_turns_on": {
+        "title": "Does your device open and function properly?",
+        "description": "",
+        "answers": {
+            "yes": {
+                "title": "Yes",
+                "description": "My device opens and functions properly"
+            },
+            "no": {
+                "title": "No",
+                "description": "My device doesn’t open or functions properly"
+            }
+        }
+    },
+    "cosmetic_options": {
+        "title": "Check device condition",
+        "subtitle": "Let’s take a quick look at your device.\nYou’ll capture images of the front and back of your device to check for damage. We’ll then evaluate the touch screen, microphone, and speakers.",
+        "mirror": {
+            "title": "Use a mirror",
+            "recommended": "Recommended"
+        },
+        "other_device": {
+            "title": "Use another device"
+        }
+    },
+    "eligibility_decision": {
+        "checking": "Checking device eligibility",
+        "success": {
+            "description": "Great news!\nYour device is eligible for protection.",
+            "button_primary": "Continue"
+        },
+        "failure": {
+            "description": "Unfortunately this device is not eligible for device protection",
+            "reason": "We found an issue with the %@ during the evaluation.",
+            "button_primary": "Exit",
+            "button_secondary": "Retry"
+        }
+    },
+    "lcd_condition": {
+        "title": "Is the device free from liquid damage and LCD bleeds?",
+        "description": "Inspect your device carefully and choose from the options below to answer.",
+        "answers": {
+            "yes": {
+                "title": "Yes",
+                "description": "The LCD screen is excellent"
+            },
+            "no": {
+                "title": "No",
+                "description": "Excellent condition with minimal marks."
+            }
+        }
+    },
+    "back_condition_page": {
+        "title": "Back Condition",
+        "description": "Check the condition of your back camera  using a clean mirror. Please remove your case.",
+        "button": "Check back condition",
+        "footer_message": "My back camera doesn’t work"
+    },
+    "grading_answers_list_page": {
+        "title": "Let’s try again!",
+        "description": "Improve the items on the list bellow so we can have better photos of your device",
+        "answers": {
+            "out-of-focus": "Please ensure the photo of the device is clear and in focus.",
+            "brightness": "Please capture device photo in brighter environment.",
+            "device-not-visible": "Please ensure the device is clearly visible on the captured photo",
+            "accessories": "Please remove visible stickers and/or damaged screen protectors/covers",
+            "device-holding": "Please ensure your hands do not cover the front screen of the device."
+        },
+        "button": "Retake photo"
+    },
+    "trade_option_page": {
+        "title": "Select trade in option.",
+        "option_home": {
+            "title": "Trade in from home",
+            "description": "A Pandas rider will pick up your smartphone from your preferred location."
+        },
+        "option_courier": {
+            "title": "Drop off at Courier",
+            "description": "Ship your phone to us<br>via courier partners."
+        },
+        "option_atm": {
+            "title": "Trade in at a Pandas kiosk",
+            "description": "Drop off your device at the nearest Pandas kiosk."
+        },
+        "option_courier_at_store": {
+            "title": "Drop off @ Courier",
+            "description": "We will arrange a courier to  pick up your device from your place. Your device will be evaluated within a day."
+        },
+        "option_at_store": {
+            "title": "Drop off  @ Store",
+            "description": "Drop off your device at the nearest %@ store and get a voucher instantly!"
+        }
+    },
+    "success_messages": {
+        "front_camera": "Bravo!",
+        "back_camera": "Great!",
+        "digitizer": "Touch screen check complete!",
+        "multitouch": "Beautiful!",
+        "sound": "Sound test complete",
+        "face_id": "Beautiful!",
+        "device_motion": "Amazing!",
+        "device_condition": "Thanks"
+    },
+    "personal_info_page": {
+        "title": "Personal info",
+        "description": "Enter your personal info to continue",
+        "input_full_name": "Full Name",
+        "input_email": "E-mail",
+        "input_phone": "Phone"
+    },
+    "grading_errors": {
+        "grader-front-cosmetics": "Front cosmetics",
+        "grader-back-cosmetics": "Back cosmetics",
+        "grader-body-frame-cosmetics": "Body frame cosmetics",
+        "grader-camera-cosmetics": "Camera cosmetics",
+        "grader-lcd-condition": "LCD condition",
+        "digitizer": "Screen",
+        "sound-performance": "Audio"
+    }
+}
+
