@@ -52,7 +52,20 @@ Before starting the SDK you need to call the `configure` public method of `Panda
 ```swift
 PandasGrading.shared.configure(sdkConfig: gradingSDKConfig)
 ```
+#### Note about Dark Theme
+Currently Dark Theme is not supported. **If you are using SwiftUI you need to add .preferredColorScheme(.light) to the SDKView in order to avoid bad user experience**
 
+Example:
+```swift
+
+        .fullScreenCover(isPresented: $isPresented) {
+            SDKView(flow: $gradingFlow,
+                    sessionId: $sessionId)
+            .preferredColorScheme(.light)
+            .ignoresSafeArea()
+            
+        }
+```
 ### Environment configuration
 
 The environment can be set with the `environment` parameter. `.staging`,`.uat` or `.production`.
