@@ -10,8 +10,6 @@ Swift version: 5.0
 ### Swift Package Manager
 
 In the project's Package Dependencies add a new dependency for url https://github.com/greenpandaio/grading-sdk-ios-spm and set the desired version.
-
-After the PandasGradingSDK package is fetched, drag and drop the PandasGradingSDK.bundle from the package contents folder to the project root checking "Copy items if needed".
 Then include it in the project's target(Project settings -> targets -> Frameworks, Libraries & Embedded Content -> Add PandasGradingSDK).
 
 For the CocoaPods legacy installation refer to [the cocoa pod installation instructions](CocoaPodsInstall.md)
